@@ -3,7 +3,7 @@
 function titleClickHandler(event){
     event.preventDefault(); //Prevents from changing sites url (will not add #link ad the end)
     const clickedElement = this;
-    console.log('Link was clicked!');
+    //console.log('Link was clicked!');
   
     /* remove class 'active' from all article links  */
     const activeLinks = document.querySelectorAll('.titles a.active');
@@ -13,7 +13,7 @@ function titleClickHandler(event){
     }
 
     /* add class 'active' to the clicked link */
-    console.log('clickedElement:', clickedElement);
+    //console.log('clickedElement:', clickedElement);
     clickedElement.classList.add('active');
   
     /* remove class 'active' from all articles */
@@ -25,11 +25,11 @@ function titleClickHandler(event){
 
     /* get 'href' attribute from the clicked link */
     const titleLink = clickedElement.getAttribute('href');
-    console.log('Title Link:' + titleLink);
+    //console.log('Title Link:' + titleLink);
   
     /* find the correct article using the selector (value of 'href' attribute) */
     const articleSelect = document.querySelector(titleLink);
-    console.log('Article ID:', articleSelect);
+    //console.log('Article ID:', articleSelect);
   
     /* add class 'active' to the correct article */
     articleSelect.classList.add('active');
